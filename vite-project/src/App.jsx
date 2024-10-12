@@ -1,3 +1,4 @@
+import TodoApp from "./components/TodoApp"
 import Usecase11 from "./components/Usecase11"
 import UseCase2 from "./components/UseCase2"
 import UseCase3 from "./components/UseCase3"
@@ -13,6 +14,7 @@ function App() {
       <UseCase3/>
       <UseCase4/>
       <UserCaseMap/>
+      <TodoApp/>
     </div>
   )
 
