@@ -1,3 +1,4 @@
+import Parent from "./components/propsdemos/parent"
 import TodoApp from "./components/TodoApp"
 import Usecase11 from "./components/Usecase11"
 import UseCase2 from "./components/UseCase2"
@@ -15,6 +16,7 @@ function App() {
       <UseCase4/>
       <UserCaseMap/>
       <TodoApp/>
+      <Parent/>
     </div>
   )
 
