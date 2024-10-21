@@ -6,14 +6,15 @@ function TodoApp() {
     const handleChange=(e)=>{
         setTask(e.target.value)
     }
+    
     const handleClick=()=>{
         const id=Math.floor(Math.random()*1000);
         if (task.trim()) {
             setTodos([...todos,{id,task,status:'pending' }]);
             setTask(''); 
-        }
-        
+        }    
     }
+    
     const updatetask=(id)=>{
         setTodos(todos.map(item=>{
             if(item.id==id){
