@@ -12,6 +12,18 @@ function TodoApp() {
             setTodos([...todos,{id,task,status:'pending' }]);
             setTask(''); 
         }
+        
+    }
+    const updatetask=(id)=>{
+        setTodos(todos.map(item=>{
+            if(item.id==id){
+                item.status = 'complete';
+            }
+            return item;
+        }));
+    }
+    const deleteTask=(id)=>{
+        setTodos(todos.filter(item=>item.id!==id));
     }
   return (
     <div>
@@ -19,7 +31,11 @@ function TodoApp() {
         <button onClick={handleClick}>Add Task</button>
         <ul>
             {todos.map(todo=>(
-                    <li key={todo.id}>{todo.task} --- {todo.status}</li>
+                    <li key={todo.id}>{todo.task} --- {todo.status}
+                        <button onClick={()=>updatetask(todo.id)}>update</button>
+                        <button onClick={()=>deleteTask(todo.id)}>X</button>
+                    </li>
+                    
             ))}
         </ul>
     </div>
