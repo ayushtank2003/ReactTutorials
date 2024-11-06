@@ -8,10 +8,12 @@ import CompOne from '../src/ContextAPI/CompOne'
 
 
 
-const Studentinfo=createContext();
+const StudentInfo=createContext();
+const StudentInfo1=createContext();
 function App() {
 
   const f_name='Peter'
+  const l_name='parker'
   return (
     <div className='container'>
       <CustomerList/>
@@ -21,12 +23,14 @@ function App() {
 
 
       {/* <CompOne f_name={f_name}/> "-------for prop Drilling ------"" */}
-      <Studentinfo.Provider value={f_name}>
-        <CompOne/>
-      </Studentinfo.Provider>
+      <StudentInfo.Provider value={f_name}>
+        <StudentInfo1.Provider value={l_name}>
+          <CompOne/>
+        </StudentInfo1.Provider>
+      </StudentInfo.Provider>
     </div>
   )
 }
 
 export default App
-export {Studentinfo}
+export {StudentInfo , StudentInfo1}
