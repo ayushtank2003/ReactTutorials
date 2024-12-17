@@ -7,18 +7,7 @@ const CompThree = (props) => {
   return (
     <div>
     <h2>My name using usecontext is {f_name} {l_name}</h2>
-
-
-
-
-
-
-
-
     {/* for useContext in props */}
-
-
-
 
     {/* In order to access the state from the App component, we need to use the Consumer component from the context API */}
       {/* <Studentinfo.Consumer>

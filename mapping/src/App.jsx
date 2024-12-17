@@ -1,11 +1,13 @@
-import { createContext, useState } from 'react'
+import { createContext, useEffect, useState} from 'react'
 import './App.css'
 import CustomerList from './components/CustomerList'
 // import SortingDemo from './components/SortingDemo'
 import FilteredData from './components/FilteredData'
 // import CompOne from '../src/PropDrilling/CompOne'
 import CompOne from '../src/ContextAPI/CompOne'
-
+import UseState from '../src/hooks/UseState'
+import UseEffect from './hooks/UseEffect'
+import ReactDemoFect from './hooks/ReactDemoFect'
 
 
 const StudentInfo=createContext();
@@ -14,6 +16,15 @@ function App() {
 
   const f_name='Peter'
   const l_name='parker'
+  const[ index,setIndex]=useState(0);
+  const Name=['peter','tom','tom','jerry']
+  useEffect(()=>{
+    if(index===Name.length-1)
+    return;
+    setTimeout(()=>{
+      setIndex((index)=>index+1)
+    },3000)
+  },[index])
   return (
     <div className='container'>
       <CustomerList/>
@@ -28,6 +39,13 @@ function App() {
           <CompOne/>
         </StudentInfo1.Provider>
       </StudentInfo.Provider>
+      <UseState/>
+
+
+      <UseEffect name={Name[index]}/>
+      <ReactDemoFect/>
+      
+
     </div>
   )
 }
