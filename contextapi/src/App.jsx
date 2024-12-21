@@ -1,5 +1,8 @@
 import GrandParent from "./components/GrandParent"
 import CounterParent from "./contextDemo/CounterParent"
+import EmailValidation from "./hooks/EmailValidation"
+import UseEffectExample from "./hooks/UseEffectExample"
+import UseEffectExample2 from "./hooks/UseEffectExample2"
 
 function App() {
 
@@ -8,6 +11,9 @@ function App() {
       <h3>App Component</h3>
       <GrandParent/>
       <CounterParent/>
+      <UseEffectExample/>
+      <UseEffectExample2/>
+      <EmailValidation/>
     </div>
   )
 }
