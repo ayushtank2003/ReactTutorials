@@ -8,6 +8,7 @@ import CompOne from '../src/ContextAPI/CompOne'
 import UseState from '../src/hooks/UseState'
 import UseEffect from './hooks/UseEffect'
 import ReactDemoFect from './hooks/ReactDemoFect'
+import FormDemo1 from './reactForm/FormDemo1'
 
 
 const StudentInfo=createContext();
@@ -43,7 +44,8 @@ function App() {
 
 
       <UseEffect name={Name[index]}/>
-      <ReactDemoFect/>
+      {/* <ReactDemoFect/> */}
+      <FormDemo1/>
       
 
     </div>
