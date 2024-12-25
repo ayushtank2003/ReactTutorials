@@ -9,6 +9,9 @@ import UseState from '../src/hooks/UseState'
 import UseEffect from './hooks/UseEffect'
 import ReactDemoFect from './hooks/ReactDemoFect'
 import FormDemo1 from './reactForm/FormDemo1'
+import FetchApi from './API/FetchApi'
+import AxiosApi from './API/AxiosApi'
+import AxiosApiPost from './API/AxiosApiPost'
 
 
 const StudentInfo=createContext();
@@ -46,6 +49,9 @@ function App() {
       <UseEffect name={Name[index]}/>
       {/* <ReactDemoFect/> */}
       <FormDemo1/>
+      <FetchApi/>
+      <AxiosApi/>
+      <AxiosApiPost/>
       
 
     </div>
